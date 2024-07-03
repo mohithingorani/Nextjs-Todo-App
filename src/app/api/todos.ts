@@ -1,7 +1,10 @@
 "use server"
-const client = new PrismaClient();
 
 import { PrismaClient } from "@prisma/client";
+
+const client = new PrismaClient();
+
+
 export async function createTodo(title: string) {
     const todo = await client.todo.create({
         data: {
