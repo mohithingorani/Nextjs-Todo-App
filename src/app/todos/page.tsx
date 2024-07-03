@@ -12,7 +12,8 @@ export default function Todo() {
     const [title, setTitle] = useState("");
     const [todos, setTodos] = useState<Todo[]>([]);
 
-    async function addHandler() {
+    async function addHandler() 
+    {
         await createTodo(title);
         getTodos();
     }
@@ -48,13 +49,11 @@ export default function Todo() {
                 <div>
                     {todos.length == 0 ? (<div>Empty</div>) : (
                         todos.map((todo) => {
-                            return <div>
-                                <TodoCard onclick={() => onDelete(todo.id)} title={
+                            return <TodoCard key= {todo.id} onclick={() => onDelete(todo.id)} title={
                                     todo.title.length <= 10
                                         ? todo.title
                                         : todo.title.substring(0, 8).concat("..")
-                                } key={todo.id} />
-                            </div>
+                                } />
                         })
 
 
