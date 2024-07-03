@@ -44,7 +44,7 @@ export default function Todo() {
                     <input onChange={(e) => {
                         setTitle(e.target.value);
                     }} className="mt-4 border-2 border-black rounded-md px-2 py-1 " type="text" placeholder="add todo"></input>
-                    <button onClick={addHandler} className="ml-2 bg-green-200 px-2 py-1 rounded-md border-2 border-black">Add</button>
+                    <button onClick={addHandler} className="ml-2 bg-green-200 px-2 py-1 rounded-md border-2 border-black">Dont Add</button>
                 </div>
                 <div>
                     {todos.length == 0 ? (<div>Empty</div>) : (
